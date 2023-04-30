@@ -35,6 +35,7 @@ func QuickSort(arr []int) []int {
 	return arr
 }
 
+// Sort
 func Sort(arr []int) {
 	sort.Ints(arr)
 }
