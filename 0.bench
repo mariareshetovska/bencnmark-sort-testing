@@ -1,0 +1,11 @@
+goos: darwin
+goarch: arm64
+pkg: benchmark-sort-testing
+BenchmarkBubbleSort-10        	1000000000	         3.924 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSort-10              	367308933	        32.66 ns/op	      24 B/op	       1 allocs/op
+BenchmarkQuickSort-10         	53180262	       228.8 ns/op	     216 B/op	      12 allocs/op
+BenchmarkBubbleSort100K-10    	   18386	    563790 ns/op	      43 B/op	       0 allocs/op
+BenchmarkSort100K-10          	   48192	    233238 ns/op	      40 B/op	       1 allocs/op
+BenchmarkQuickSort100K-10     	50848848	       233.2 ns/op	     216 B/op	      12 allocs/op
+PASS
+ok  	benchmark-sort-testing	475.516s

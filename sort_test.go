@@ -1,4 +1,4 @@
-package sort
+package main
 
 import (
 	"testing"
@@ -29,7 +29,7 @@ func BenchmarkQuickSort(b *testing.B) {
 }
 
 func BenchmarkBubbleSort100K(b *testing.B) {
-	arr := getarr(100000)
+	arr := generateArray(100000)
 
 	for i := 0; i < b.N; i++ {
 		BubbleSort(arr)
@@ -37,7 +37,7 @@ func BenchmarkBubbleSort100K(b *testing.B) {
 }
 
 func BenchmarkSort100K(b *testing.B) {
-	arr := getarr(100000)
+	arr := generateArray(100000)
 
 	for i := 0; i < b.N; i++ {
 		Sort(arr)
@@ -52,7 +52,7 @@ func BenchmarkQuickSort100K(b *testing.B) {
 	}
 }
 
-func getarr(n int) []int {
+func generateArray(n int) []int {
 	result := make([]int, n)
 	j := 0
 	for i := n - 1; i > 0; i-- {

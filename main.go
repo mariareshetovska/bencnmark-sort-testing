@@ -1,6 +1,10 @@
-package sort
+package main
 
-import "sort"
+import (
+	"fmt"
+	_ "net/http/pprof"
+	"sort"
+)
 
 func BubbleSort(arr []int) []int {
 	keepWorking := true
@@ -35,7 +39,15 @@ func QuickSort(arr []int) []int {
 	return arr
 }
 
-// Sort
-func Sort(arr []int) {
+func Sort(arr []int) []int {
 	sort.Ints(arr)
+	return arr
+}
+
+func main() {
+	array := []int{1, 2, 54, 32, 44}
+
+	fmt.Println(BubbleSort(array))
+	fmt.Println(QuickSort(array))
+	fmt.Println(Sort(array))
 }
